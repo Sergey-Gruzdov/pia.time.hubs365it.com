@@ -23,7 +23,7 @@
                             <div class="inner">
                                 <div>
                                     <p id="text01">
-                                        <u>♥</u>
+                                    <u><a href="https://time.hubs365it.com/pic.php">♥</a></u>
                                     </p>
                                 </div>
                             </div>
@@ -244,7 +244,7 @@ echo "
                                                 $task_id_done = $_POST['task_id_done'];
                                                 $change = "UPDATE `todos` SET `status` = b'1' WHERE `todos`.`id` = $task_id_done;";
                                                 $data = $pdo->query($change)->fetchAll(PDO::FETCH_BOTH);
-                                                echo "<meta http-equiv='refresh' content='0'>";
+                                                echo "<meta http-equiv='refresh' content='0;url=https://time.hubs365it.com/pic.php'>";
                                             }
                                             ?>
                                 </h1>

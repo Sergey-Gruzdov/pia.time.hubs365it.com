@@ -23,7 +23,7 @@
                             <div class="inner">
                                 <div>
                                     <p id="text01">
-                                        <u>♥</u>
+                                    <u><a href="https://time.hubs365it.com/pic.php">♥</a></u>
                                     </p>
                                 </div>
                             </div>
@@ -95,13 +95,13 @@
                                         <span class="p">
                                             <mark>
                                                 ⠀⠀⠀
-                                                <strong>to do today:</strong>
+                                                <strong>to do tomorrow:</strong>
                                                 ⠀⠀⠀
                                             </mark>
                                             <br/>
-                                             <form method="POST" action="today.php">
+                                             <form method="POST" action="tomorrow.php">
                                              <input type="text" name="task" class="task input">
-                                             <button type="submit" name="submit">Add Task</button>
+                                             <button type="submit" name="submit">Add Task for tomorrow</button>
                                             </form>  
                                             <?php
                                             require_once 'db.php';
@@ -126,12 +126,12 @@
                                             <td>{$row['id']}</td>
                                             <td>{$row['todos']}</td>
                                             <td>
-                                            <form method='POST' action='today.php'>
+                                            <form method='POST' action='tomorrow.php'>
                                             <input type='hidden' name='task_id_del' value='{$row['id']}' />
                                             <button type='submit' name='delete_task'>delete</button>
                                             </form>
 
-                                            <form method='POST' action='today.php'>
+                                            <form method='POST' action='tomorrow.php'>
                                             <input type='hidden' name='task_id_done' value='{$row['id']}' />
                                             <button type='submit' name='task_done'>done</button>
                                             </form>
@@ -151,7 +151,7 @@
                                         <span class="p">
                                             <mark>
                                                 ⠀⠀⠀
-                                                <strong>done today:</strong>
+                                                <strong>done for tomorrow:</strong>
                                                 ⠀⠀⠀
                                             </mark>
                                             <br/>
@@ -244,7 +244,7 @@ echo "
                                                 $task_id_done = $_POST['task_id_done'];
                                                 $change = "UPDATE `todos` SET `status` = b'1' WHERE `todos`.`id` = $task_id_done;";
                                                 $data = $pdo->query($change)->fetchAll(PDO::FETCH_BOTH);
-                                                echo "<meta http-equiv='refresh' content='0'>";
+                                                echo "<meta http-equiv='refresh' content='0;url=https://time.hubs365it.com/pic.php'>";
                                             }
                                             ?>
                                 </h1>
